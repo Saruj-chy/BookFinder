@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Picker } from '@react-native-community/picker';
 
 const PickerView = () => {
+
+  const [language, setLanguage] = useState("");
   return (
     <Picker
-      // selectedValue={this.state.language}
-      style={{ height: 50, width: 100 }}
-    // onValueChange={(itemValue, itemIndex) =>
-    //   this.setState({ language: itemValue })
-    // }
+      selectedValue={language}
+      style={{ backgroundColor: 'orange', color: 'green' }}
+      enabled={true}
+      mode="dropdown" //dialog, dropdown
+      // prompt={language} //no change show
+      // itemStyle={{ backgroundColor: 'orange', color: 'green' }}  //no change show
+      onValueChange={(itemValue, itemIndex) =>
+        setLanguage(itemValue)
+      }
     >
       <Picker.Item label="Java" value="java" />
-      <Picker.Item label="JavaScript" value="js" />
+      <Picker.Item label="JavaScript" value="JavaScript" />
+      <Picker.Item label="C" value="C" />
+      <Picker.Item label="C++" value="C++" />
+      <Picker.Item label="Python" value="Python" />
+      <Picker.Item label="Ruby" value="Ruby" />
     </Picker>
   );
 };
