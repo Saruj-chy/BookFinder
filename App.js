@@ -25,12 +25,15 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import SliderView from './components/Slider/SliderView';
+import Checkboxes from './components/CheckBox/Checkboxes';
 
 const App = () => {
   return (
     <View>
       {/* <Login /> */}
-      <SliderView />
+      {/* <SliderView /> */}
+
+      <Checkboxes />
     </View>
   );
 };
