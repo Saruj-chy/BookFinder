@@ -1,17 +1,25 @@
 import React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Alert } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
+import Login from './components/login/Login';
 
 
 const PagerView = () => {
   return (
-    <ViewPager style={styles.viewPager} initialPage={0}>
+    <ViewPager
+      style={styles.viewPager}
+      initialPage={0}
+      orientation="horizontal"
+      // pageMargin={20}
+      scrollEnabled={true}
+    // onPageScrollStateChanged={() => Alert.alert("Page change")}
+    >
       <View key="1">
-        <Text>First page</Text>
+        <Login />
       </View>
       <View key="2">
-        <Text>Second page</Text>
+        <Text style={{ flex: 1, backgroundColor: 'red', fontSize: 30, padding: 20 }}>Second page</Text>
       </View>
     </ViewPager>
   );

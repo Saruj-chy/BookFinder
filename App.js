@@ -1,34 +1,29 @@
-import React from 'react';
-
-import { StyleSheet, View, Text, Alert } from 'react-native';
-import ViewPager from '@react-native-community/viewpager';
-import Login from './components/login/Login';
-
+import React, { useState } from 'react';
+import { Picker } from '@react-native-community/picker';
 
 const App = () => {
+
+  const [language, setLanguage] = useState("");
   return (
-    <ViewPager
-      style={styles.viewPager}
-      initialPage={0}
-      orientation="horizontal"
-      // pageMargin={20}
-      scrollEnabled={true}
-    // onPageScrollStateChanged={() => Alert.alert("Page change")}
+    <Picker
+      selectedValue={language}
+      style={{ backgroundColor: 'orange', color: 'green' }}
+      enabled={true}
+      mode="dropdown" //dialog, dropdown
+      // prompt={language} //no change show
+      // itemStyle={{ backgroundColor: 'orange', color: 'green' }}  //no change show
+      onValueChange={(itemValue, itemIndex) =>
+        setLanguage(itemValue)
+      }
     >
-      <View key="1">
-        <Login />
-      </View>
-      <View key="2">
-        <Text style={{ flex: 1, backgroundColor: 'red', fontSize: 30, padding: 20 }}>Second page</Text>
-      </View>
-    </ViewPager>
+      <Picker.Item label="Java" value="java" />
+      <Picker.Item label="JavaScript" value="JavaScript" />
+      <Picker.Item label="C" value="C" />
+      <Picker.Item label="C++" value="C++" />
+      <Picker.Item label="Python" value="Python" />
+      <Picker.Item label="Ruby" value="Ruby" />
+    </Picker>
   );
 };
-
-const styles = StyleSheet.create({
-  viewPager: {
-    flex: 1,
-  },
-});
 
 export default App;
