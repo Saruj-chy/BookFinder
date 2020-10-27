@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StyleSheet, View, Text, Alert } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
-import Login from './components/login/Login';
+import Login from '../login/Login';
 
 
 const PagerView = () => {

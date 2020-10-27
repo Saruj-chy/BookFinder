@@ -15,7 +15,13 @@
     "@react-native-community/slider": "^3.0.3",
     "@react-native-community/viewpager": "^4.1.6",
     "react": "16.13.1",
-    "react-native": "0.63.3"
+    "react-native": "0.63.3",
+    "react-native-chart-kit": "^6.6.1",
+    "react-native-d3multiline-chart": "^1.0.19",
+    "react-native-dialog": "^6.0.0",
+    "react-native-popup-dialog": "^0.18.3",
+    "react-native-svg": "^12.1.0",
+    "react-native-svg-charts": "^5.4.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.6",
