@@ -41,7 +41,7 @@ const ChartMultiLine_Both = () => {
   // const data = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80]
 
   return (
-    <View style={{ height: 200, padding: 20 }}>
+    <View style={{ height: 200, padding: 20, marginBottom: 400 }}>
       <View style={{ height: 300, flexDirection: 'row', textAlignVertical: 50, margin: 20, marginTop: 100, marginBottom: 100 }}>
         <YAxis
           data={data1}

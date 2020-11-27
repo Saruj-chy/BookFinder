@@ -1,7 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { MultiLineChart } from 'react-native-d3multiline-chart'
-
+import { MultiLineChart } from 'react-native-d3multiline-chart';
 
 const ChartD3MultiLine = () => {
 
@@ -61,9 +60,8 @@ const ChartD3MultiLine = () => {
   var Color = ['#00b7d4', 'red']
 
   return (
-    <View style={styles.container}>
-      <MultiLineChart data={data} leftAxisData={leftAxisData} bottomAxisData={bottomAxisData} legendColor={legendColor}
-        legendText={legendText} minX={minX} maxX={maxX} minY={minY} maxY={maxY} scatterPlotEnable={false} dataPointsVisible={true} Color={Color} />
+    <View>
+      <MultiLineChart data={data} />
     </View>
   );
 };

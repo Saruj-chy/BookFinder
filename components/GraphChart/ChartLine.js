@@ -23,6 +23,7 @@ const ChartLine = () => {
   const data2 = [15, 25, 35, 45, 55]
 
 
+
   return (
     <View>
       <Text>Bezier Line Chart</Text>
